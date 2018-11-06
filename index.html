@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title> Proyecto Final </title>
+
+		<link href="css/estilos.css" rel="stylesheet">
+		<script src="js/jscript.js"></script>
+
+<!-- Charts -->
+		<script src="https://www.gstatic.com/charts/loader.js"></script>
+	    <script>
+	      google.charts.load('current', {
+	        'packages':['geochart'],
+	        // Note: you will need to get a mapsApiKey for your project.
+	        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+	        'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+	      });
+	      google.charts.setOnLoadCallback(drawRegionsMap);
+
+	      function drawRegionsMap() {
+	        var data = google.visualization.arrayToDataTable([
+	          ['Country', 'Popularity'],
+	          ['Germany', 200],
+	          ['United States', 300],
+	          ['Brazil', 400],
+	          ['Canada', 500],
+	          ['France', 600],
+	          ['RU', 700]
+	        ]);
+
+	        var options = {};
+
+	        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+	        chart.draw(data, options);
+	      }
+	    </script>
+	</head>
+
+	<body>
+		<div class="principal">
+<!-- Encabezado -->
+			<div class="encabezado">
+				<div class="fondo_e">
+					<span id="proyecto" onmouseout="menos()" onmouseover="mas()">Proyecto Final <br>
+					Diseño HTML</span>
+				</div>
+
+				<div class="fondo_m">
+					<div class="menu">
+						<a href="index.html" class="a_m">Inicio</a>
+					</div>
+
+					<div class="menu">
+						<a class="a_m" href="#chart">Charts</a>
+					</div>
+
+					<div class="menu">
+						<a class="a_m" href="#mapa">Mapa</a>
+					</div>
+
+					<div class="menu">
+						<a class="a_m" href="#formulario_1">Formulario</a>
+					</div>
+
+					<div class="menu">
+						<a class="a_m" href="#informacion">Información</a>
+					</div>
+
+					<div class="menu">
+						<a class="a_m" href="paisajes_cr.html">Galería</a>
+					</div>
+				</div>
+			</div>
+
+<!-- Google Charts -->
+			<div class="chart" id="charts">
+				<div id="regions_div" style="width: 100%; height: 100%;"></div>
+			</div>
+<!-- Seccion Mapa Formulario-->
+			<div class="seccion">
+<!-- Google Maps -->
+				<div class="map" id="mapa">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15720.061988187963!2d-84.0914918!3d9.932667!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x19ed74547b14baa9!2sINA+CENECOS!5e0!3m2!1ses!2scr!4v1541393268600" class="g_map" allowfullscreen></iframe>
+				</div>
+
+<!-- Formulario -->
+				<div class="formulario" id="formulario_1">
+					<form action="index.html" method="post">
+					<fieldset>
+						<legend>Datos Personales</legend>
+						<label for="nombre">Nombre:</label>
+						<input type="text" name="nombre" id="nombre" placeholder="Escribir Nombre">
+						<br>
+						<label for="edad">Edad:</label>
+						<input type="text" name="edad" id="edad" placeholder="Escribir Edad">
+						<br><br>
+						<label for="correo">Correo:</label>
+						<input type="email" name="correo" id="correo" placeholder="Escribir Correo">
+						<br>
+						<label for="contraseña">Contraseña:</label>
+						<input type="password" name="contraseña" id="contraseña" placeholder="Escribir Contraseña">
+						<br><br>
+						Fecha de Nacimiento:
+						<br>
+						<input type="text" name="dia" placeholder="Día" size="4" maxlength="2">
+						<input type="text" name="mes" placeholder="Mes" size="8">
+						<input type="text" name="año" placeholder="Año" size="8" maxlength="4">
+						<br>
+						<input type="radio" name="sexo" value="hombre" checked="checked">Hombre
+						<input type="radio" name="sexo" value="mujer">Mujer
+						<br><br>
+						Preferencias:
+						<br>
+						<input type="checkbox" value="cine" name="cine">Ir al Cine.
+						<input type="checkbox" value="comprar" name="comprar">Salir a Comprar.
+						<br>
+						<input type="checkbox" value="pasear" name="pasear">Pasear.
+						<input type="checkbox" value="casa" name="casa">Quedarse en casa.
+						<br>
+						<input type="checkbox" value="otro" name="otro">Otro.
+						<br>
+						<input type="text" name="preferencia" placeholder="Indicar otra Preferencia" size="40">
+						<br>
+						<select name="paises" id="paises">
+							<option value="Países">Países</option>
+							<option value="Argentina">Argentia</option>
+							<option value="Colombia">Colombia</option>
+							<option value="Costa Rica">Costa Rica</option>
+							<option value="EspañaMexico">EspañaMexico</option>
+							<option value="Mexico">Mexico</option>
+							<option value="USA">USA</option>
+							<option value="Otro">Otro</option>
+						</select>
+						<input type="text" name="paises" placeholder="Indicar País">
+						<br><br>
+						<input type="submit" value="Enviar Información">
+						<input type="reset" value="Borrar Información">
+					</fieldset>
+					</form>
+				</div>
+			</div>
+
+<!-- Información -->
+			<div class="info" id="informacion">
+				<div class="actividades">
+					<h2>Información de Actividades</h2><br>
+					<ul>
+						<li><a href="https://drive.google.com/open?id=1MOLm_e18Ld5ZvlnZ5zNLHHjPjEC7ThH2" class="text_a">Actividad 0:</a> Ejercicios de Maqueteo.</li>
+
+						<li><a href="https://sites.google.com/view/informacionbasicadisenoweb/p%C3%A1gina-principal" class="text_a">Actividad 1:</a> Página de Google Site.</li>
+
+						<li><a href="https://www.facebook.com/Paisaje_CR-349330452301162/" class="text_a">Actividad 2:</a> Página de Facebook.</li>
+
+						<li><a href="https://drive.google.com/open?id=1QS7q6qgSwmTSRk1tGMuRdMi3E1fg5kcg" class="text_a">Actividad 3:</a> Página con 5 Imágenes y un Gif.</li>
+
+						<li><a href="https://drive.google.com/open?id=1RPZ-U0XBkeoMafhXHy0Mulf7dT4KaEFC" class="text_a">Actividad 6:</a> WampServer.</li>
+
+						<li><a href="https://youtu.be/o9dTZLsg5xo" class="text_a">Actividad 7:</a> Vídeo de Youtube.</li>
+
+						<li><a href="https://drive.google.com/open?id=1QldTqAjHFMelTHGd9icTNaqn9Bvsu4vN" class="text_a">Actividad 8:</a> Página HTML.</li>
+
+						<li><a href="https://drive.google.com/open?id=1PuOmULaarDdaCFohswkDGbimmBjjP4Ph" class="text_a">Actividad 9:</a> SEO.</li>
+					</ul>
+				</div>
+<!-- Hoja de Cálculo -->
+				<table class='tabla_3ing'>
+					<tr><th>Número de Placa</th><th>Marca</th><th>Precio x Hora</th><th>Cantidad Hora</th><th>Costo Total</th><th>Aumento</th><th>Monto Neto a Pagar
+					</th></tr><tr><td>CA209</td><td>Mack</td><td> ₡124,20 </td><td>2</td><td> ₡248,40 </td><td> ₡- </td><td> ₡248,40 
+					</td></tr><tr><td>CL548</td><td>Hino</td><td> ₡103,35 </td><td>1</td><td> ₡103,35 </td><td> ₡- </td><td> ₡103,35 
+					</td></tr><tr><td>SJP79</td><td>Toyota</td><td> ₡112,50 </td><td>6</td><td> ₡675,00 </td><td> ₡33,75 </td><td> ₡708,75 
+					</td></tr><tr><td>CL654</td><td>International</td><td> ₡264,70 </td><td>10,5</td><td> ₡2.779,35 </td><td> ₡138,97 </td><td> ₡2.918,32 
+					</td></tr><tr><td>GB932</td><td>Pegaso</td><td> ₡358,00 </td><td>4</td><td> ₡1.432,00 </td><td> ₡71,60 </td><td> ₡1.503,60 
+					</td></tr>
+				</table>				
+			</div>			
+<!-- Pie de Página -->
+			<div class="pie_pagina">
+				<div class="contacto">
+					<h4>Realizado por:</h4>
+					<address>Ismael Lara Cubero<br>
+					Correo: ismalara98@gmail.com</address>
+				</div>
+
+				<div class="red_social">
+					<ul>
+						<li><a href="https://www.facebook.com/Paisaje_CR-349330452301162/" class="r_s"><img src="img/facebook.png" alt="Facebook" class="r_s">Facebook</a></li>
+						<li><a href="https://www.youtube.com/channel/UCJAvMavsdtWHU4EUl9Z3c9w/featured?view_as=subscriber" class="r_s"><img src="img/youtube.png" alt="Youtube" class="r_s">YouTube</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
