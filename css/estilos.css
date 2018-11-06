@@ -1,0 +1,178 @@
+@charset "UTF-8";
+
+* {
+	margin:0;
+	padding:0;
+}
+
+@font-face {
+	font-family: "";
+	src:url('../fonts/');
+}
+
+body {
+	height:1500px;
+}
+
+/*div {
+	border:solid;
+}*/
+
+ul {
+	list-style: none;
+	color: black;
+}
+
+a {
+	text-decoration: none;
+	font-weight:bold;
+}
+/* Hoja de Cálculo */
+table.tabla_3ing {
+		font-size: 12px;
+		border: 1px solid #000000;
+		font-family: Arial, Helvetica, sans-serif;}
+	.tabla_3ing th {
+		background-color: #ffff80;
+		color: #000000;
+		border:1px solid #cdcdcd;}
+	.tabla_3ing td {
+		padding: 3px;margin: 3px;
+		border: 1px solid #cdcdcd;}
+
+.principal {
+	margin-left:10%;
+	width:80%;
+	height:100%;
+	background-color: whitesmoke;
+}
+/* Encabezado */
+.encabezado {
+	width: 100%;
+	height: 15%;
+	background-image: url(../img/encabezado.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+}
+
+.fondo_e {
+	width: 100%;
+	height: 75%;
+	background-color: black;
+	opacity: 0.4;
+	text-align: center;
+}
+
+.fondo_m {
+	width: 100%;
+	height: 25%;
+	background-color: steelblue;
+	opacity: 0.8;
+}
+
+.menu {
+	width: 8%;
+	height: 30%;
+	margin-left: 5%;
+	margin-top: 1%;
+	padding: 1%;
+	float: left;
+	text-align: center;
+	font-size: large;
+}
+
+.a_m{
+	color: white;
+	opacity: 1;
+}
+
+/* Google Charts */
+.chart {
+	width: 100%;
+	height: 30%;
+}
+
+.seccion {
+	width: 100%;
+	height: 25%;
+}
+
+/* Google Maps */
+.map {
+	width: 49%;
+	height: 100%;
+	float: left;
+}
+
+.g_map {
+	width: 100%;
+	height: 98%;
+}
+
+/* Formulario */
+.formulario {
+	width: 49%;
+	height: 80%;
+	margin-top: 2%;
+	float: right;
+}
+
+/* Informacion */
+.info {
+	width: 100%;
+	height: 25%;
+	background-color: white;
+	border:1px solid;
+	color: black;
+}
+
+.text_a {
+	font-size: large;
+	color: steelblue;
+	font-family: "Time New Roma"
+}
+
+.actividades {
+	width: 45%;
+	height: 90%;
+	float: left;
+	padding: 1%;
+}
+
+.hoja_cal {
+	margin-top: 5%;
+}
+
+/* Pie de Página */
+.pie_pagina {
+	width: 100%;
+	height: 5%;
+	background-color: whitesmoke;
+}
+
+.contacto {
+	width: 40%;
+	height: 100%;
+	margin-left: 5%;
+	float: left;
+}
+
+.red_social {
+	width: 30%;
+	height: 100%;
+	float: right;
+	list-style: none;
+}
+
+.r_s {
+	width: 8%;
+	height: 8%;
+	color: gray;
+}
+
+#proyecto {
+	color:white;
+	font-size: xx-large;
+	opacity: 1;
+}
