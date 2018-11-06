@@ -1,2 +1,2 @@
-# proyecto-session-2
+# proyecto-sesion-2
 Proyecto Final Diseño HTML
